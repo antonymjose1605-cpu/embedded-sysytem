@@ -13,7 +13,7 @@ int main()
 
     ret_sum = multi(a, b);
 
-    printf("The difference is: %d\n", ret_sum);
+    printf("The product is: %d\n", ret_sum);
 
     return 0;
 }
