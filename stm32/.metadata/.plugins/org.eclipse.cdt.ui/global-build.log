@@ -1,0 +1,100 @@
+20:49:15 **** Incremental Build of configuration Debug for project First_project ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "First_project.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ADMIN\OneDrive\embedded system\stm32\First_project\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="First_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: First_project.elf
+ 
+arm-none-eabi-size  First_project.elf 
+arm-none-eabi-objdump -h -S First_project.elf  > "First_project.list"
+   text	   data	    bss	    dec	    hex	filename
+    712	      0	   1568	   2280	    8e8	First_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: First_project.list
+ 
+21:00:25 **** Incremental Build of configuration Debug for project First_project ****
+make -j8 all 
+arm-none-eabi-size  First_project.elf 
+   text	   data	    bss	    dec	    hex	filename
+    712	      0	   1568	   2280	    8e8	First_project.elf
+Finished building: default.size.stdout
+ 
+21:07:04 **** Incremental Build of configuration Debug for project First_project ****
+make -j8 all 
+arm-none-eabi-size  First_project.elf 
+   text	   data	    bss	    dec	    hex	filename
+    712	      0	   1568	   2280	    8e8	First_project.elf
+Finished building: default.size.stdout
+ 
+19:50:28 **** Incremental Build of configuration Debug for project First_project ****
+make -j8 all 
+arm-none-eabi-size  First_project.elf 
+   text	   data	    bss	    dec	    hex	filename
+    712	      0	   1568	   2280	    8e8	First_project.elf
+Finished building: default.size.stdout
+ 
+20:19:47 **** Build of configuration Debug for project First_project ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:27:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   27 |     printf("hello stm\n");
+      |     ^~~~~~
+../Src/main.c:20:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   19 | #include <stdint.h>
+  +++ |+#include <stdio.h>
+   20 | 
+../Src/main.c:27:5: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   27 |     printf("hello stm\n");
+      |     ^~~~~~
+../Src/main.c:27:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "First_project.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ADMIN\OneDrive\embedded system\stm32\First_project\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="First_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: First_project.elf
+ 
+arm-none-eabi-size  First_project.elf 
+arm-none-eabi-objdump -h -S First_project.elf  > "First_project.list"
+   text	   data	    bss	    dec	    hex	filename
+   3368	     92	   1900	   5360	   14f0	First_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: First_project.list
+ 
+20:20:14 **** Incremental Build of configuration Debug for project First_project ****
+make -j8 all 
+arm-none-eabi-size  First_project.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3368	     92	   1900	   5360	   14f0	First_project.elf
+Finished building: default.size.stdout
+ 
+20:36:50 **** Incremental Build of configuration Debug for project First_project ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -o "First_project.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ADMIN\OneDrive\embedded system\stm32\First_project\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="First_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: First_project.elf
+ 
+arm-none-eabi-size  First_project.elf 
+arm-none-eabi-objdump -h -S First_project.elf  > "First_project.list"
+   text	   data	    bss	    dec	    hex	filename
+   3444	     92	   1900	   5436	   153c	First_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: First_project.list
+ 
+20:46:06 **** Incremental Build of configuration Debug for project First_project ****
+make -j8 all 
+arm-none-eabi-size  First_project.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3444	     92	   1900	   5436	   153c	First_project.elf
+Finished building: default.size.stdout
+ 
+20:48:03 **** Incremental Build of configuration Debug for project First_project ****
+make -j8 all 
+arm-none-eabi-size  First_project.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3444	     92	   1900	   5436	   153c	First_project.elf
+Finished building: default.size.stdout
+ 
